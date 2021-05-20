@@ -1,11 +1,11 @@
 import json
-import keyboard
 import os
 import time
 from random import randint
 
-import pyWinhook
+import keyboard
 import pythoncom
+import pyWinhook
 
 # Getting configuration
 with open("config.json", "r") as f:
