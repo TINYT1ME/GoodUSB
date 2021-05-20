@@ -62,15 +62,35 @@ def found(event):
             return True
     # if mode is secure, shutdown pc
     elif mode == "secure":
-        os.system("shutdown /s /t 0")
+        if shutdown:
+            os.system("shutdown /s /t 0")
+    elif mode == "interested":
+        if not timing:
+            timing = time.time()
+        elif (time.time() - timing) >= timeout:
+            caught = False
+            return True
+        log(event)
 
     return False
+
+
+# log input
+def log(event):
+    global logfile
+
+    with open(logfile, 'a+') as file:
+        if event.Key == "Space":
+            file.write(" ")
+        else:
+            file.write(event.Key)
+        file.close()
 
 
 # Declaring hook manager
 hm = pyWinhook.HookManager()
 # To block keyboard
-hm.KeyAll = KeyDown
+hm.KeyDown = KeyDown
 # Set the hook
 hm.HookKeyboard()
 # Wait forever

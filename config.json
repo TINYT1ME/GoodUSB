@@ -1,5 +1,5 @@
 {
-  "mode": "secure",
+  "mode": "interested",
 
   "standard": {
     "history": 10,
@@ -7,7 +7,7 @@
     "timeout": 60,
     "shutdown": null,
     "delete": null,
-    "logfile": "log.txt"
+    "logfile": null
   },
   "secure": {
     "history": 4,
@@ -15,7 +15,7 @@
     "timeout": null,
     "shutdown": true,
     "delete": null,
-    "logfile": "log.txt"
+    "logfile": null
   },
   "quiet": {
     "history": 10,
@@ -23,14 +23,14 @@
     "timeout": null,
     "shutdown": null,
     "delete": 7,
-    "logfile": "log.txt"
+    "logfile": null
   },
   "interested": {
     "history": 10,
     "threshold": 0.003,
-    "timeout": 60,
+    "timeout": 10,
+    "shutdown": null,
     "delete": null,
     "logfile": "log.txt"
-
   }
 }
