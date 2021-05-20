@@ -1,29 +1,70 @@
 import time
+import json
 
 import pyWinhook
 import pythoncom
 
+# Getting configuration
+with open('config.json', 'r') as f:
+    config = json.load(f)
+mode = config["mode"]
+history = config[mode]["history"]
+threshold = config[mode]["threshold"]
+timeout = config[mode]["timeout"]
+
+# Defining variables
 last_key = time.time()
+history_array = []
+caught = False
+timing = None
 
 
-def keyboard_event(event):
-    global last_key
+# Gets called for each keystroke
+def KeyDown(event):
+    global last_key, mode, history, threshold, timeout, history_array
+    global caught, hm
+
     time_diff = -1 * (last_key - time.time())
-    if time_diff < 0.003:
-        last_key = time.time()
-        return False
+    history_array.append(time_diff)
+
+    if caught:
+        return found(event)
+    elif len(history_array) > history and not caught:
+        history_array.pop(0)
+        time_total = sum(history_array) / history
+
+        if time_total < threshold:
+            last_key = time.time()
+            print("CAUGHT!!!")
+            return found(event)
+        else:
+            last_key = time.time()
+            return True
     else:
         last_key = time.time()
         return True
 
 
-# create a hook manager object
-hm = pyWinhook.HookManager()
-# to block keyboard
-hm.KeyDown = keyboard_event
+def found(event):
+    global mode, timeout, caught, timing
+    caught = True
 
-# set the hook
-hm.KeyAll = keyboard_event
+    # if mode is standard, timeout for x seconds
+    if mode == "standard":
+        if not timing:
+            timing = time.time()
+        elif (time.time() - timing) >= timeout:
+            caught = False
+            return True
+
+    return False
+
+
+# Declaring hook manager
+hm = pyWinhook.HookManager()
+# To block keyboard
+hm.KeyAll = KeyDown
+# Set the hook
 hm.HookKeyboard()
-# wait forever
+# Wait forever
 pythoncom.PumpMessages()

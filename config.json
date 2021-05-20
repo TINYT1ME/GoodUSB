@@ -1,0 +1,24 @@
+{
+  "mode": "standard",
+  "standard": {
+    "history": 10,
+    "threshold": 0.003,
+    "timeout": 60
+  },
+  "secure": {
+    "history": 4,
+    "threshold": 0.003,
+    "logfile": "log.txt"
+  },
+  "quiet": {
+    "history": 10,
+    "threshold": 0.003,
+    "delete": 7
+  },
+  "interested": {
+    "history": 10,
+    "threshold": 0.003,
+    "logfile": "log.txt",
+    "timeout": 60
+  }
+}
