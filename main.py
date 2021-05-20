@@ -1,5 +1,6 @@
 import time
 import json
+import os
 
 import pyWinhook
 import pythoncom
@@ -11,6 +12,9 @@ mode = config["mode"]
 history = config[mode]["history"]
 threshold = config[mode]["threshold"]
 timeout = config[mode]["timeout"]
+shutdown = config[mode]["shutdown"]
+delete = config[mode]["delete"]
+logfile = config[mode]["logfile"]
 
 # Defining variables
 last_key = time.time()
@@ -56,6 +60,9 @@ def found(event):
         elif (time.time() - timing) >= timeout:
             caught = False
             return True
+    # if mode is secure, shutdown pc
+    elif mode == "secure":
+        os.system("shutdown /s /t 0")
 
     return False
 

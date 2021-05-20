@@ -1,24 +1,36 @@
 {
-  "mode": "standard",
+  "mode": "secure",
+
   "standard": {
     "history": 10,
     "threshold": 0.003,
-    "timeout": 60
+    "timeout": 60,
+    "shutdown": null,
+    "delete": null,
+    "logfile": "log.txt"
   },
   "secure": {
     "history": 4,
     "threshold": 0.003,
+    "timeout": null,
+    "shutdown": true,
+    "delete": null,
     "logfile": "log.txt"
   },
   "quiet": {
     "history": 10,
     "threshold": 0.003,
-    "delete": 7
+    "timeout": null,
+    "shutdown": null,
+    "delete": 7,
+    "logfile": "log.txt"
   },
   "interested": {
     "history": 10,
     "threshold": 0.003,
-    "logfile": "log.txt",
-    "timeout": 60
+    "timeout": 60,
+    "delete": null,
+    "logfile": "log.txt"
+
   }
 }
