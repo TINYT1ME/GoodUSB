@@ -54,8 +54,8 @@
 ----
 
 ###  :link: Similar open source projects
-* [duckhunt](https://github.com/pmsosa/duckhunt) by pmsosa
 * [BadUSB-Kill-Switch](https://github.com/ONLYA/BadUSB-Kill-Switch) by ONLYA
+* [duckhunt](https://github.com/pmsosa/duckhunt) by pmsosa
 * [BadUSB-Detection](https://github.com/armoured-ape/BadUSB-Detection) by armoured-ape
 
 ----
