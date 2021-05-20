@@ -1,4 +1,3 @@
-# GoodUSB
 <h1 align="center">
   <a href="https://github.com/TINYT1ME/GoodUSB/"><img src="https://i.postimg.cc/T30VtMdW/goodusb.png" width="400" title="goodusb"></a>
 </h1>
@@ -16,6 +15,7 @@
     - [Modes](#gear-Modes)
 - [Installation](#package-Installation)
     - [Requirements](#point_down-Requirements)
+- [Future](#alien-Future)
 
 ----
 
@@ -50,6 +50,13 @@
 * [PyWinhook](https://www.lfd.uci.edu/~gohlke/pythonlibs/#pywinhook)
 * [pythoncom](https://pypi.org/project/pythoncom/)
 * [keyboard](https://pypi.org/project/keyboard/)
+
+----
+
+###  :alien: Future
+* Compatibility:  Mac, Linux
+* Include more modes
+* Include custom mode
 
 ----
 
