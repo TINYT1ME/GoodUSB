@@ -1,12 +1,12 @@
 {
-  "mode": "interested",
+  "mode": "standard",
 
   "standard": {
     "history": 10,
     "threshold": 0.003,
     "timeout": 60,
     "shutdown": null,
-    "delete": null,
+    "sneak": null,
     "logfile": null
   },
   "secure": {
@@ -14,23 +14,23 @@
     "threshold": 0.003,
     "timeout": null,
     "shutdown": true,
-    "delete": null,
+    "sneak": null,
     "logfile": null
   },
   "quiet": {
     "history": 10,
     "threshold": 0.003,
-    "timeout": null,
+    "timeout": 60,
     "shutdown": null,
-    "delete": 7,
+    "sneak": 25,
     "logfile": null
   },
   "interested": {
     "history": 10,
     "threshold": 0.003,
-    "timeout": 10,
+    "timeout": 60,
     "shutdown": null,
-    "delete": null,
+    "sneak": null,
     "logfile": "log.txt"
   }
 }
