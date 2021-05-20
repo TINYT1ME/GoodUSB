@@ -44,8 +44,9 @@
 
 ## :package: Installation
 
+- 🔴 MAKE SURE TO OPEN CMD IN ADMINISTRATOR
 - 1️⃣ `git clone https://github.com/TINYT1ME/GoodUSB`
-- 2️⃣ `move GoodUSB C:\ProgramData\Microsoft\Windows\Start Menu\Programs\StartUp\`
+- 2️⃣ `cd GoodUSB & python setup.py`
 
 ---
 
