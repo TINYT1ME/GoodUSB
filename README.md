@@ -53,6 +53,7 @@
 
 ### :point_down: Requirements
 
+- Requirements are installed with setup.py
 - [PyWinhook](https://www.lfd.uci.edu/~gohlke/pythonlibs/#pywinhook)
 - [pythoncom](https://pypi.org/project/pythoncom/)
 - [keyboard](https://pypi.org/project/keyboard/)
