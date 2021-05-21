@@ -1,4 +1,3 @@
-import ctypes
 import json
 import os
 import time
@@ -9,17 +8,8 @@ import pythoncom
 import pyWinhook
 
 # Getting configuration
-try:
-    with open("C:/Program Files/GoodUSB/config.json", "r") as f:
-        config = json.load(f)
-except FileNotFoundError:
-    ctypes.windll.user32.MessageBoxW(
-        None,
-        "config.json file not found\n" "Please run 'setup.py' or reinstall",
-        "FileNotFoundError",
-        0,
-    )
-    exit()
+with open("C:/Program Files/GoodUSB/config.json", "r") as f:
+    config = json.load(f)
 mode = config["mode"]
 history = config[mode]["history"]
 threshold = config[mode]["threshold"]
