@@ -17,7 +17,9 @@ os.rename(
     "main.py",
     "C:/ProgramData/Microsoft/" "Windows/Start Menu/Programs/StartUp/main.pyw",
 )
+
+os.mkdir("C:/Program Files/GoodUSB/", mode=0o777, dir_fd=None)
 os.rename(
     "config.json",
-    "C:/ProgramData/Microsoft/Windows/Start Menu/Programs/StartUp/config.json",
+    "C:/Program Files/GoodUSB/config.json",
 )
