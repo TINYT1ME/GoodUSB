@@ -18,7 +18,7 @@ jobs:
 
     name: GitHub's Super Linter
 
-    runs-on: windows-latest
+    runs-on: ubuntu-latest
 
 
 
