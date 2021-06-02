@@ -46,7 +46,7 @@
 
 - 🔴 MAKE SURE TO OPEN CMD IN ADMINISTRATOR
 - 1️⃣ `git clone https://github.com/TINYT1ME/GoodUSB`
-- 2️⃣ `cd GoodUSB & pip3 install requirements.txt`
+- 2️⃣ `cd GoodUSB & pip3 install -r requirements.txt`
 - 3️⃣ `python3 main.py`
 - 🚪 Your can now delete `GoodUSB` folder
 
