@@ -1,25 +1,18 @@
-import os
-import subprocess
-import sys
+from setuptools import setup
 
 
-def install(package):
-    subprocess.check_call([sys.executable, "-m", "pip", "install", package])
-
-
-# download all needed libraries
-install("pyWinhook-1.6.2-cp39-cp39-win_amd64.whl")
-install("pythoncom")
-install("keyboard")
-
-# move main and config to startup folder
-os.rename(
-    "main.py",
-    "C:/ProgramData/Microsoft/" "Windows/Start Menu/Programs/StartUp/main.pyw",
+# used for pypi.org
+setup(
+    name='GoodUSB',
+    version='1.0',
+    description='Prevent BadUSB attacks',
+    license="MIT",
+    author='TINYT1ME',
+    long_description=open('README.md', 'r', encoding='UTF-8').read(),
+    long_description_content_type='text/markdown',
+    url="https://github.com/TINYT1ME/GoodUSB",
+    packages=['GoodUSB'],
+    install_requires=['pyWinhook-1.6.2-cp39-cp39-win_amd64.whl', 'pythoncom', 'keyboard']
 )
 
-os.mkdir("C:/Program Files/GoodUSB/", mode=0o777, dir_fd=None)
-os.rename(
-    "config.json",
-    "C:/Program Files/GoodUSB/config.json",
-)
+
