@@ -1,8 +1,7 @@
-from setuptools import setup
-
+import setuptools
 
 # used for pypi.org
-setup(
+setuptools.setup(
     name="GoodUSB",
     version="1.1",
     description="Prevent BadUSB attacks",
