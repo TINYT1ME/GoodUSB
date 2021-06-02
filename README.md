@@ -46,14 +46,15 @@
 
 - 🔴 MAKE SURE TO OPEN CMD IN ADMINISTRATOR
 - 1️⃣ `git clone https://github.com/TINYT1ME/GoodUSB`
-- 2️⃣ `cd GoodUSB & python setup.py`
+- 2️⃣ `cd GoodUSB & pip3 install -r requirements.txt`
+- 3️⃣ `python3 main.py`
 - 🚪 Your can now delete `GoodUSB` folder
 
 ---
 
 ### :point_down: Requirements
 
-- Requirements are installed with setup.py
+- Requirements are installed with requirements.txt
 - [PyWinhook](https://www.lfd.uci.edu/~gohlke/pythonlibs/#pywinhook)
 - [pythoncom](https://pypi.org/project/pythoncom/)
 - [keyboard](https://pypi.org/project/keyboard/)
