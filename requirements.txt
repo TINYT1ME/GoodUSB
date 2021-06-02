@@ -1,4 +1,3 @@
 keyboard==0.13.5
 pypiwin32==223
-pywin32==301
-pyWinhook @ file:/pyWinhook-1.6.2-cp39-cp39-win_amd64.whl
+pyWinhook-1.6.2-cp39-cp39-win_amd64.whl

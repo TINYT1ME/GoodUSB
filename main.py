@@ -15,7 +15,7 @@ def add_to_registry():
 # rename goodUSB.py to main.pyw
 os.rename(
     "GoodUSB/goodUSB.py",
-    "goodUSB.pyw",
+    "GoodUSB/goodUSB.pyw",
 )
 
 # make Program Files directory
@@ -27,7 +27,7 @@ os.rename(
     "C:\\Program Files\\GoodUSB\\config.json",
 )
 os.rename(
-    "main.pyw",
+    "GoodUSB/goodUSB.pyw",
     "C:\\Program Files\\GoodUSB\\goodUSB.pyw",
 )
 
