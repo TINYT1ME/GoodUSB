@@ -12,7 +12,7 @@ setup(
     long_description_content_type='text/markdown',
     url="https://github.com/TINYT1ME/GoodUSB",
     packages=['GoodUSB'],
-    install_requires=['pyWinhook-1.6.2-cp39-cp39-win_amd64.whl', 'pythoncom', 'keyboard']
+    install_requires=['pythoncom', 'keyboard']
 )
 
 
